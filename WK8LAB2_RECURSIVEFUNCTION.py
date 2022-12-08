@@ -10,7 +10,7 @@ def fib(n):
         return fib(n - 1) + fib(n - 2)
 
 def main():
-    for 1 in range(16):
+    for i in range(16):
         print(fib(i), end=",")
         print("...")
 if __name__ == "__main__":
