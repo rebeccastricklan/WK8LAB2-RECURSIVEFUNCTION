@@ -1,25 +1,17 @@
 #Rebecca Stricklan
 #Wk8Lab2
 #CIS261
-
-def factorial_recursive(num):
-    if num == 0 or num == 1:
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
         return 1
     else:
-        return num * factorial_recursive(num - 1)
-def factorial_iterative(num):
-    fact = 1
-    for number in range(2, num+1):
-        fact = number * fact
-    return fact
+        return fib(n - 1) + fib(n - 2)
+
 def main():
-    numList = [0, 5, 10, 25, 50, 100]
-    print ("Factorial results using an iterative function")
-    for num in numList:
-        print(f'{num}! = {factorial_iterative(num)}')
-    print ("Factorial results using a recursive function")
-    for num in numList:
-        print(num, '! =', factorial_recursive(num))
+    for 1 in range(16):
+        print(fib(i), end=",")
+        print("...")
 if __name__ == "__main__":
     main()
-
